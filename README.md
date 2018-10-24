@@ -155,7 +155,8 @@ Here is an example of what a citation might look like in your .bib file
 Now in order to reference this citation anywhere in the code, you can use the following command
 
 ```latex
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \cite{Mittelbach2005}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna aliqua. \cite{Mittelbach2005}
 ```
 
 In case you need to point out something that needs a citation, you can include the following, in your `preamble.tex` and call `\citationneeded` whereever you need a citation
