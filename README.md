@@ -16,6 +16,8 @@ This is meant as a LaTeX reference card. It is free to use, and I am accepting a
   * [Underlined text](#Underlined-text)
 * [Citations](#Citations)
 * [Making labels](#Making-labels)
+* [Math in LaTeX](#Math-in-LaTeX)
+* [Tables in LaTeX](#Tables-in-LaTeX)
 
 ## Inserting an image
 
@@ -188,3 +190,68 @@ Assume we have created a label called `fig:example`. To reference this label, we
 ```latex
 \ref{fig:exmaple}
 ```
+
+## Math in LaTeX
+
+[To the top](#LaTeX-tips-and-tricks)
+
+In order to use equations and other mathematical expressions in LaTeX, you must first include the `amsmath`, `amssymb`, `units` and `SIUnits` packages
+
+```latex
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[amssymb]{SIUnits}
+\usepackage{units}
+```
+
+If you want to spice up your mathematical expressions, you can also include the `amsfonts` package.
+
+To make an expression, do the following
+
+```latex
+\begin{equation}
+    2^4=16
+\end{equation}
+```
+
+![Math example](./images/math-example.JPG)
+
+## Tables in LaTeX
+
+[To the top](#LaTeX-tips-and-tricks)
+
+To use nice looking tables in LaTeX, you must include the `tabularx`, `booktabs` and `array` packages
+
+```latex
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+```
+
+The following example shows how a table might be set up
+
+```latex
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|c|r}
+         Paper & 2 ps. & 4,5 DKK  \\\hline
+         Pencils & 3 ps. & 10,8 DKK
+    \end{tabular}
+    \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+```
+
+![Table example](./images/table-example.JPG)
+
+`{l|c|r}` describes how the text is aligned in the different cells.
+
+*l* is Left side allignment.
+
+*c* is center allignment.
+
+*r* is right side allignment.
+
+Every table entry is seperated by an `&` sign, and when you need to add a line seperator between the next row of cells, you use `\\\hline`. If you do not include the `\hline` your table will not have a line seperator.
+
+![Table without line seperator](./images/table-no-line-example.JPG)
