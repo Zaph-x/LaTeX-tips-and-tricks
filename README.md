@@ -15,6 +15,8 @@ This is meant as a LaTeX reference card. It is free to use, and I am accepting a
   * [Italics text](#Italics-text)
   * [Underlined text](#Underlined-text)
 * [Citations](#Citations)
+  * [Making labels](#Making-labels)
+  * [Referencing using cleveref](#Referencing-using-cleveref)
 * [Making labels](#Making-labels)
 * [Math in LaTeX](#Math-in-LaTeX)
 * [Tables in LaTeX](#Tables-in-LaTeX)
@@ -190,6 +192,18 @@ Assume we have created a label called `fig:example`. To reference this label, we
 ```latex
 \ref{fig:exmaple}
 ```
+
+#### Referencing using cleveref
+
+[To the top](#LaTeX-tips-and-tricks)
+
+Referencing using the standard `\ref{}` can be quite annoying with typing all the `figure \ref{label}`. With cleveref this is all handled for you! Use the `cleveref` package to automate this.
+
+```latex
+\usepackage{cleveref}
+```
+
+To reference a figure, table or equation, you can now use `\cref{label}` which will write `fig. 0.0`, `eq. 0.0` or whatever the type is. 
 
 ## Math in LaTeX
 
