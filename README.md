@@ -30,6 +30,8 @@ This is meant as a LaTeX reference card. It is free to use, and I am accepting a
 \end{figure}
 ```
 
+![Example of inserted image](./images/figure-example.JPG)
+
 ## Inserting a code listing
 
 [To the top](#Tabel-of-contents)
