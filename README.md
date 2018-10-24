@@ -19,7 +19,7 @@ This is meant as a LaTeX reference card. It is free to use, and I am accepting a
 
 ## Inserting an image
 
-[To the top](#Tabel-of-contents)
+[To the top](#LaTeX-tips-and-tricks)
 
 ```latex
 \begin{figure}
@@ -34,7 +34,7 @@ This is meant as a LaTeX reference card. It is free to use, and I am accepting a
 
 ## Inserting a code listing
 
-[To the top](#Tabel-of-contents)
+[To the top](#LaTeX-tips-and-tricks)
 
 Please note that this step requires you to have a `preamble.tex` with the following lines in it.
 
@@ -79,7 +79,7 @@ Please note that this step requires you to have a `preamble.tex` with the follow
 
 #### From a file
 
-[To the top](#Tabel-of-contents)
+[To the top](#LaTeX-tips-and-tricks)
 
 ```latex
 \lstinputlisting[language=c, style=framed, label=code:label_for_code,caption=Caption of the file]{path/to/file.c}
@@ -87,7 +87,7 @@ Please note that this step requires you to have a `preamble.tex` with the follow
 
 #### From text
 
-[To the top](#Tabel-of-contents)
+[To the top](#LaTeX-tips-and-tricks)
 
 Please note that when writing code like this, in LaTeX, you must escape every caracter that is used in LaTeX, eg. `{}#\&` and so on.
 
@@ -110,7 +110,7 @@ int main(void) \{
 
 ## Text formatting
 
-[To the top](#Tabel-of-contents)
+[To the top](#LaTeX-tips-and-tricks)
 
 The following formatting can all be mixed.
 
@@ -134,7 +134,7 @@ The following formatting can all be mixed.
 
 ## Citations
 
-[To the top](#Tabel-of-contents)
+[To the top](#LaTeX-tips-and-tricks)
 
 In order to use citations you must have a library to keep track of these. I recommend using the following line, in your preamble
 
@@ -175,7 +175,7 @@ In case you need to point out something that needs a citation, you can include t
 
 ## Making labels
 
-[To the top](#Tabel-of-contents)
+[To the top](#LaTeX-tips-and-tricks)
 
 Labels can be used to reference something in your document at a later time. Labels are created by doing
 
