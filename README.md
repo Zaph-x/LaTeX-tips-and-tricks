@@ -92,7 +92,7 @@ Please note that this step requires you to have a `preamble.tex` with the follow
 Please note that when writing code like this, in LaTeX, you must escape every caracter that is used in LaTeX, eg. `{}#\&` and so on.
 
 ```latex
-\begin{lstlisting}[language=c, style=framed, label=code:label_for_code,caption=Caption of the file]
+\begin{lstlisting}[language=c, style=framed, label=code:label_for_code,caption=Caption of the code]
 
 \#include <stdio.h>
 
@@ -105,6 +105,8 @@ int main(void) \{
 
 \end{lstlisting}
 ```
+
+![Example of code in latex](./images/code-example.JPG)
 
 ## Text formatting
 
