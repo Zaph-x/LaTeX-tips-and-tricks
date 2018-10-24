@@ -1,5 +1,9 @@
 # LaTeX tips and tricks
 
+## Contributions
+
+This is meant as a LaTeX reference card. It is free to use, and I am accepting any type of useful contribution. If the reference card is missing something or something is not right, you are more than welcome to contribute to the project.
+
 ## Tabel of contents
 
 * [Inserting an image](#Inserting-an-image)
