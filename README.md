@@ -19,6 +19,7 @@ This is meant as a LaTeX reference card. It is free to use, and I am accepting a
   * [Referencing using cleveref](#Referencing-using-cleveref)
 * [Making labels](#Making-labels)
 * [Math in LaTeX](#Math-in-LaTeX)
+  * [Math, LaTeX and OCR](#Math,-LaTeX-and-OCR)
 * [Tables in LaTeX](#Tables-in-LaTeX)
 
 ## Inserting an image
@@ -229,6 +230,10 @@ To make an expression, do the following
 ```
 
 ![Math example](./images/math-example.JPG)
+
+#### Math, LaTeX and OCR
+
+If you don't want to type in every single formula and equation, you can use the [mathpix OCR tool](https://mathpix.com) to convert an existing image to valid mathematical expressions formatted for LaTeX.
 
 ## Tables in LaTeX
 
