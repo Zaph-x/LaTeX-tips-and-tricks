@@ -1,0 +1,145 @@
+\documentclass[11pt, twoside,a4paper,openright]{report}         % This sets up the documentclass with font size and paper size already set
+\usepackage[utf8]{inputenc}                                     % This will make the document use UTF-8 characters
+\usepackage[english]{babel}                                     % Changing the language to English, if this is not the default
+\usepackage[T1]{fontenc}                                        % The font encoding
+\usepackage{epstopdf}
+
+
+%%%%%%%%% GRAPHICS %%%%%%%%%%
+
+\usepackage{graphicx}                                           % This is the standard graphics package
+\usepackage{listings}                                           % OPTIONAL - This will allow for code listings in the report
+\usepackage{tabularx}                                           % Allows for tables in the report
+\usepackage{array, booktabs}                                    % Better table formatting
+\usepackage{color}                                              % Allows for use of colours
+\usepackage{xcolor}                                             % More colours
+
+\usepackage{caption}                                            % Allows for custom cations
+\captionsetup{font=footnotesize, labelfont=bf}                  % Sets the font size in the custom captions, as well as font type to bold
+
+\usepackage{framed}                                             % Allow frames around listings and theorems
+\usepackage{floats}                                             % Enables extra float modifiers
+
+%%%%%%%% OPTIONAL LISTING MODIFIERS %%%%%%%%%
+
+\usepackage{lstautogobble}                                      % Fix relative indenting
+\usepackage{zi4}                                                % Nice font
+
+\definecolor{bluekeywords}{rgb}{0.13, 0.13, 1}                  % Custom colours
+\definecolor{greencomments}{rgb}{0, 0.5, 0}                     % Custom colours
+\definecolor{redstrings}{rgb}{0.9, 0, 0}                        % Custom colours
+\definecolor{graynumbers}{rgb}{0.5, 0.5, 0.5}                   % Custom colours
+
+\DeclareCaptionFont{white}{\color{white}}                       % Settings the caption font
+\DeclareCaptionFormat{listing}{                                 % Setting the caption format
+    \colorbox{gray}{                                            % Setting the box colour
+        \parbox{\textwidth}{#1#2#3}                             % Typesetting
+    }
+}
+\captionsetup[lstlisting]{                                      % Setting up the caption
+    format=listing,                                             % Setting the format
+    labelfont=white,                                            % Setting the font of the label
+    textfont=white                                              % Setting the text font
+}
+
+\lstdefinestyle{framed}{                                        % Settings for framed listings
+    frame=lrb,                                                  % Setting the frame left, right and bottom
+    belowcaptionskip=-1pt,
+    xleftmargin=8pt,
+    framexleftmargin=8pt,
+    framexrightmargin=5pt,
+    framextopmargin=5pt,
+    framexbottommargin=5pt,
+    framesep=0pt,
+    rulesep=0pt,
+    autogobble,
+    columns=fullflexible,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    stepnumber=1,
+    numbers=left,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    escapeinside={(*@}{@*)},
+    commentstyle=\color{greencomments},
+    keywordstyle=\color{bluekeywords},
+    stringstyle=\color{redstrings},
+    numberstyle=\color{graynumbers},
+    basicstyle=\ttfamily\footnotesize,
+    frame=shadowbox,
+    tabsize=4,
+    captionpos=b
+}
+
+%%%%%%%% MATHEMATICS %%%%%%%%
+
+\usepackage{amsmath}                                            % Allign correctly
+\usepackage{amssymb}                                            % More mathematica symbols
+\usepackage[amssymb]{SIunits}                                   % Support SI units
+\usepackage{units}                                              % Typeset units correct
+\usepackage{amsfonts}                                           % Math fonts
+\usepackage[framed,amsmath,thmmarks]{ntheorem}                  % Allows theorems. With amsmath you can also you \eqref{label} to reference an equation
+
+%%%%%%% LAYOUT %%%%%%%%
+
+\usepackage[inner=28mm,outer=41mm,]{geometry}                   % Corrects the margins
+\usepackage{titlesec}                                           % Prettier titles
+\titleformat{\chapter}[display]{                                % Format the chapter title
+    \normalfont\huge\bfseries                                   % Format the chapter title
+}{    \chaptertitlename\ \thechapter}{20pt}{\Huge}              % Format the chapter title
+\titleformat*{\section}{\normalfont\Large\bfseries}             % Format section titles
+\titleformat*{\subsection}{\normalfont\large\bfseries}          % Format subsection titles
+\titleformat*{\subsubsection}{\normalfont\normalsize\bfseries}  % Format subsubsection titles
+
+\usepackage{fancyhdr}                                           % Fancy headers
+\pagestyle{fancy}                                               % Set the pagestyle to being fancy. This will write the chapter and page number to the header
+\fancyhf{}                                                      % Clear the header and footer
+\fancyhead[RE]{\small\nouppercase\leftmark}                     % Even pages have the chapter title
+\fancyhead[LO]{\small\nouppercase\rightmark}                    % Odd pages have the section title
+\fancyhead[LE,RO]{\thepage}                                     % Pagenumber on every page
+\raggedbottom                                                   % Do not streach content. Instead replace it with a whitespace
+
+\renewcommand{\headrulewidth}{0pt}                              % OPTIONAL Remove the header line seperating header and page
+
+\usepackage{calc}                                               % Better layout formatting. Allows for arithmetics with length and such
+
+%%%%%%% BIBLIOGRAPHY %%%%%%%%%
+
+\usepackage[                                                    % Format of bibliography
+    backend=bibtex,                                             % Use bibtex as backend manager
+    style=nature,                                               % Style the bibliography right (See https://www.overleaf.com/learn/latex/Biblatex_citation_styles for more styles)
+    bibencoding=utf8                                            % Encode bibliography with UTF-8 charset
+]{biblatex}                                                     % Format of bibliography
+
+\addbibresource{PATH/TO/BIBFILE.bib}                            
+
+%%%%%%% GOOD TO HAVES %%%%%%%%%
+
+\usepackage[nottoc]{tocbibind}                                  % Add bibliography to table of contents
+\usepackage{lastpage}                                           % Allows you to reference the last page of the paper
+\usepackage[                                                    % Adds todo notes to the document
+    textwidth=\marginparwidth,                                  % Sets the text width og the todo notes as the width of the margin
+    textsize=scriptsize                                         % Sets the fint size to a smaller size for more compact notes
+]{todonotes}                                                    % Adds todo notes to the document
+
+%%%%%%% REFERENCING AND LINKS %%%%%%%%
+
+\usepackage{nameref}                                            % Allows you to refer to sections by name
+\usepackage{hyperref}                                           % Enable hyperlinks and other referencing methods
+\usepackage{cleveref}                                           % Better figure, table and section referencing
+\usepackage{nameref}                                            % Load again to fix compatibility issues
+
+\hypersetup{                                                    % Set up the pdf with correct data
+	plainpages=false,                                           
+	pdfauthor={Author(s)},                                      % Here you put your names
+	pdftitle={Title},                                           % This should by default save it with the correct title
+	pdfsubject={Subject},                                       % The subject of the report
+	bookmarksnumbered=true,
+	colorlinks=false,                                           % Are links coloured?
+	citecolor=black,                                            % Colour of the citations
+	filecolor=black,                                            % Colour of files
+	linkcolor=black,                                            % Colour of links
+	urlcolor=black,                                             % Colour of URLs
+	pdfstartview=FitH                                           % How should the PDF scale when loaded into viewer
+}

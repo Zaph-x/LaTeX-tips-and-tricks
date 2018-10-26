@@ -221,7 +221,7 @@ In order to use equations and other mathematical expressions in LaTeX, you must 
 ```latex
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage[amssymb]{SIUnits}
+\usepackage[amssymb]{SIunits}
 \usepackage{units}
 ```
 
