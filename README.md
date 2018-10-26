@@ -202,7 +202,15 @@ Referencing using the standard `\ref{}` can be quite annoying with typing all th
 \usepackage{cleveref}
 ```
 
-To reference a figure, table or equation, you can now use `\cref{label}` which will write `fig. 0.0`, `eq. 0.0` or whatever the type is. 
+To reference a figure, table or equation, you can now use `\cref{label}` which will write `fig. 0.0`, `eq. 0.0` or whatever the type is.
+
+If you wish to change how you're referencing the appendix or anything else, you can do so in your preamble, by using the following command
+
+```latex
+\crefname{appendix}{Chapter}{Chapters}
+```
+
+Where the second parameter is the singular name, and the third parameter is the plural name.
 
 ## Math in LaTeX
 
