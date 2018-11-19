@@ -6,25 +6,25 @@ This is meant as a LaTeX reference card. It is free to use, and I am accepting a
 
 ## Tabel of contents
 
-* [Inserting an image](#Inserting-an-image)
-* [Inserting a code listing](#Inserting-a-code-listing)
-  * [From a file](#From-a-file)
-  * [From text](#From-text)
-* [Text formatting](#Text-formatting)
-  * [Bold text](#Bold-text)
-  * [Italics text](#Italics-text)
-  * [Underlined text](#Underlined-text)
-* [Citations](#Citations)
-  * [Making labels](#Making-labels)
-  * [Referencing using cleveref](#Referencing-using-cleveref)
-* [Making labels](#Making-labels)
-* [Math in LaTeX](#Math-in-LaTeX)
-  * [Math, LaTeX and OCR](#Math,-LaTeX-and-OCR)
-* [Tables in LaTeX](#Tables-in-LaTeX)
+- [LaTeX tips and tricks](#latex-tips-and-tricks)
+    - [Contributions](#contributions)
+    - [Tabel of contents](#tabel-of-contents)
+    - [Inserting an image](#inserting-an-image)
+    - [Inserting a code listing](#inserting-a-code-listing)
+            - [From a file](#from-a-file)
+            - [From text](#from-text)
+    - [Text formatting](#text-formatting)
+            - [Bold text](#bold-text)
+            - [Italics text](#italics-text)
+            - [Underlined text](#underlined-text)
+    - [Citations](#citations)
+    - [Making labels](#making-labels)
+            - [Referencing using cleveref](#referencing-using-cleveref)
+    - [Math in LaTeX](#math-in-latex)
+            - [Math, LaTeX and OCR](#math-latex-and-ocr)
+    - [Tables in LaTeX](#tables-in-latex)
 
 ## Inserting an image
-
-[To the top](#LaTeX-tips-and-tricks)
 
 ```latex
 \begin{figure}
@@ -37,9 +37,9 @@ This is meant as a LaTeX reference card. It is free to use, and I am accepting a
 
 ![Example of inserted image](./images/figure-example.JPG)
 
-## Inserting a code listing
+[![to the top](./images/to-the-top.png)](#LaTeX-tips-and-tricks)
 
-[To the top](#LaTeX-tips-and-tricks)
+## Inserting a code listing
 
 Please note that this step requires you to have a `preamble.tex` with the following lines in it.
 
@@ -82,17 +82,17 @@ Please note that this step requires you to have a `preamble.tex` with the follow
 }
 ```
 
-#### From a file
+[![to the top](./images/to-the-top.png)](#LaTeX-tips-and-tricks)
 
-[To the top](#LaTeX-tips-and-tricks)
+#### From a file
 
 ```latex
 \lstinputlisting[language=c, style=framed, label=code:label_for_code,caption=Caption of the file]{path/to/file.c}
 ```
 
-#### From text
+[![to the top](./images/to-the-top.png)](#LaTeX-tips-and-tricks)
 
-[To the top](#LaTeX-tips-and-tricks)
+#### From text
 
 ```latex
 \begin{lstlisting}[language=c, style=framed, label=code:label_for_code,caption=Caption of the code]
@@ -111,9 +111,9 @@ int main(void) {
 
 ![Example of code in latex](./images/code-example.JPG)
 
-## Text formatting
+[![to the top](./images/to-the-top.png)](#LaTeX-tips-and-tricks)
 
-[To the top](#LaTeX-tips-and-tricks)
+## Text formatting
 
 The following formatting can all be mixed.
 
@@ -135,9 +135,9 @@ The following formatting can all be mixed.
 \underline{Your text here}
 ```
 
-## Citations
+[![to the top](./images/to-the-top.png)](#LaTeX-tips-and-tricks)
 
-[To the top](#LaTeX-tips-and-tricks)
+## Citations
 
 In order to use citations you must have a library to keep track of these. I recommend using the following line, in your preamble
 
@@ -176,9 +176,9 @@ In case you need to point out something that needs a citation, you can include t
 \newcommand{\citationneeded}[1][]{\color{blue} [Citation needed]\color{black}}
 ```
 
-## Making labels
+[![to the top](./images/to-the-top.png)](#LaTeX-tips-and-tricks)
 
-[To the top](#LaTeX-tips-and-tricks)
+## Making labels
 
 Labels can be used to reference something in your document at a later time. Labels are created by doing
 
@@ -192,9 +192,9 @@ Assume we have created a label called `fig:example`. To reference this label, we
 \ref{fig:exmaple}
 ```
 
-#### Referencing using cleveref
+[![to the top](./images/to-the-top.png)](#LaTeX-tips-and-tricks)
 
-[To the top](#LaTeX-tips-and-tricks)
+#### Referencing using cleveref
 
 Referencing using the standard `\ref{}` can be quite annoying with typing all the `figure \ref{label}`. With cleveref this is all handled for you! Use the `cleveref` package to automate this.
 
@@ -212,9 +212,9 @@ If you wish to change how you're referencing the appendix or anything else, you 
 
 Where the second parameter is the singular name, and the third parameter is the plural name.
 
-## Math in LaTeX
+[![to the top](./images/to-the-top.png)](#LaTeX-tips-and-tricks)
 
-[To the top](#LaTeX-tips-and-tricks)
+## Math in LaTeX
 
 In order to use equations and other mathematical expressions in LaTeX, you must first include the `amsmath`, `amssymb`, `units` and `SIUnits` packages
 
@@ -237,13 +237,13 @@ To make an expression, do the following
 
 ![Math example](./images/math-example.JPG)
 
+[![to the top](./images/to-the-top.png)](#LaTeX-tips-and-tricks)
+
 #### Math, LaTeX and OCR
 
 If you don't want to type in every single formula and equation, you can use the [mathpix OCR tool](https://mathpix.com) to convert an existing image to valid mathematical expressions formatted for LaTeX.
 
 ## Tables in LaTeX
-
-[To the top](#LaTeX-tips-and-tricks)
 
 To use nice looking tables in LaTeX, you must include the `tabularx`, `booktabs` and `array` packages
 
@@ -280,3 +280,5 @@ The following example shows how a table might be set up
 Every table entry is seperated by an `&` sign, and when you need to add a line seperator between the next row of cells, you use `\\\hline`. If you do not include the `\hline` your table will not have a line seperator.
 
 ![Table without line seperator](./images/table-no-line-example.JPG)
+
+[![to the top](./images/to-the-top.png)](#LaTeX-tips-and-tricks)
